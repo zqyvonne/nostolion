@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Clinical Network | NostoLion</title>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f8f4ec;color:#142033;font-family:Ubuntu,sans-serif}
+nav{position:fixed;top:0;width:100%;padding:18px 6%;background:#f8f4ec;display:flex;justify-content:space-between;align-items:center;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.logo img{width:160px;display:block}
+nav a{margin-left:22px;text-decoration:none;color:#142033;font-weight:500;transition:color 0.2s}
+nav a:hover, nav a.active{color:#e87519}
+section{padding:140px 7% 70px}
+h1{font-size:48px;margin-bottom:15px}
+.subtitle{font-size:18px;color:#555;margin-bottom:40px}
+.orange{color:#e87519}
+.network-list{display:flex;flex-direction:column;gap:30px}
+.network-card{background:white;padding:35px;border-radius:18px;display:flex;gap:30px;align-items:center;box-shadow:0 10px 25px rgba(0,0,0,0.05)}
+.network-card img{width:200px;height:140px;object-fit:cover;border-radius:12px;background:#ddd}
+.network-info{flex:1}
+.network-info h3{margin-top:0;font-size:24px;color:#142033}
+.network-info p{color:#444;line-height:1.6}
+.region-tag{display:inline-block;background:#f8f4ec;color:#e87519;padding:4px 12px;border-radius:15px;font-size:12px;font-weight:700;margin-bottom:10px}
+footer{background:#142033;color:white;padding:40px 7%}
+.email{font-size:18px}
+@media(max-width:768px){.network-card{flex-direction:column;align-items:flex-start}.network-card img{width:100%;height:180px}}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">
+  <a href="index.html"><img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/logo%E5%AD%97.png" alt="NostoLion Logo"></a>
+</div>
+<div>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="knowledge.html">Knowledge</a>
+<a href="network.html" class="active">Network</a>
+<a href="products.html">Products</a>
+</div>
+</nav>
+
+<section>
+  <h1>Global Clinical <span class="orange">Network</span></h1>
+  <p class="subtitle">Connecting veterinary universities, clinical specialists, and research laboratories worldwide.</p>
+
+  <div class="network-list">
+    <div class="network-card">
+      <img src="research-partner.jpg" alt="European Veterinary Academic Partners">
+      <div class="network-info">
+        <span class="region-tag">Central & Eastern Europe</span>
+        <h3>European Academic & Parasitology Partners</h3>
+        <p>Collaborating with leading veterinary universities in Hungary and neighboring regions on vector-borne disease epidemiological studies and molecular diagnostic validation.</p>
+      </div>
+    </div>
+
+    <div class="network-card">
+      <img src="research-partner2.jpg" alt="Clinical Reference Labs">
+      <div class="network-info">
+        <span class="region-tag">Global</span>
+        <h3>Clinical Reference Laboratories</h3>
+        <p>Working closely with private reference labs to evaluate diagnostic accuracy, throughput requirements, and sample workflow optimization in high-volume settings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+<p>NostoLion © 2026</p>
+<p class="email">Contact: zqyvonne@gmail.com</p>
+</footer>
+
+</body>
+</html>

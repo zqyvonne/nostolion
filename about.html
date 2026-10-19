@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | NostoLion</title>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f8f4ec;color:#142033;font-family:Ubuntu,sans-serif}
+nav{position:fixed;top:0;width:100%;padding:18px 6%;background:#f8f4ec;display:flex;justify-content:space-between;align-items:center;z-index:10;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.logo img{width:160px;display:block}
+nav a{margin-left:22px;text-decoration:none;color:#142033;font-weight:500;transition:color 0.2s}
+nav a:hover, nav a.active{color:#e87519}
+section{padding:140px 7% 70px}
+h1{font-size:48px;margin-bottom:20px}
+h2{font-size:36px;margin-top:40px}
+.orange{color:#e87519}
+.about-hero{display:flex;gap:50px;align-items:center;margin-bottom:60px}
+.about-hero img{width:35%;height:auto;object-fit:contain;border-radius:20px;background:#ddd}
+.about-hero div{flex:1}
+.founder-name{margin:0;font-size:38px;font-weight:700}
+.founder-title{margin:8px 0 24px;font-size:18px;font-weight:400}
+.founder-credential{font-weight:700;color:#e87519}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:30px}
+.value-card{background:white;padding:30px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,0.05)}
+.value-card h3{color:#e87519;margin-top:0}
+footer{background:#142033;color:white;padding:40px 7%}
+.email{font-size:18px}
+@media(max-width:900px){.about-hero{display:block}.about-hero img{width:100%;margin-bottom:30px}.values-grid{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">
+  <a href="index.html"><img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/logo%E5%AD%97.png" alt="NostoLion Logo"></a>
+</div>
+<div>
+<a href="index.html">Home</a>
+<a href="about.html" class="active">About</a>
+<a href="knowledge.html">Knowledge</a>
+<a href="network.html">Network</a>
+<a href="products.html">Products</a>
+</div>
+</nav>
+
+<section>
+  <h1>About <span class="orange">NostoLion</span></h1>
+  
+  <div class="about-hero">
+    <img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/cd220510-32ae-4f6d-ae15-c46e40a62488.png" alt="Scarlett Zhang">
+    <div>
+      <h2 class="founder-name">Scarlett Zhang</h2>
+      <p class="founder-title">Founder &amp; CEO</p>
+      <p class="founder-credential">Licensed Veterinarian &amp; M.S. in Veterinary Medicine (Zhejiang University)</p>
+      <p>With a background in veterinary medicine and years of experience in global human and veterinary IVD product management, I founded NostoLion with a simple belief: better science can create better healthcare solutions for animals and people.</p>
+      <p>Driven by curiosity, clinical insight, and a passion for innovation, I connect trusted manufacturers, veterinary experts, and global partners to bring meaningful diagnostic solutions from ideas to real-world applications.</p>
+    </div>
+  </div>
+
+  <h2>Our Core Values</h2>
+  <div class="values-grid">
+    <div class="value-card">
+      <h3>Scientific Rigor</h3>
+      <p>We evaluate diagnostic technologies through a strict clinical lens, ensuring that solutions meet real-world accuracy and performance standards.</p>
+    </div>
+    <div class="value-card">
+      <h3>Global Collaboration</h3>
+      <p>Bridging top veterinary institutions, diagnostic manufacturers, and field clinicians across international borders.</p>
+    </div>
+    <div class="value-card">
+      <h3>Clinical Relevance</h3>
+      <p>Focusing on practical veterinary workflows to ensure diagnostic tools truly simplify veterinary care and improve patient outcomes.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+<p>NostoLion © 2026</p>
+<p class="email">Contact: zqyvonne@gmail.com</p>
+</footer>
+
+</body>
+</html>
