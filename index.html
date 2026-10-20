@@ -36,9 +36,12 @@ h2{font-size:42px}
 .card h3{margin-top:0;font-size:20px}
 .card p{color:#444;line-height:1.5}
 .card a{color:#e87519;text-decoration:none;font-weight:700}
+.section-header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:25px}
+.section-header h2{margin:0}
+.section-header a{color:#e87519;text-decoration:none;font-weight:700}
 .email{font-size:18px}
 footer{background:#142033;color:white;padding:40px 7%}
-@media(max-width:900px){.hero,.about{display:block}.hero-text,.hero-image,.about img{width:100%}.cards{grid-template-columns:1fr}}
+@media(max-width:900px){.hero,.about{display:block}.hero-text,.hero-image,.about img{width:100%}.cards{grid-template-columns:1fr}.section-header{display:block}.section-header a{display:inline-block;margin-top:10px}}
 </style>
 </head>
 
@@ -66,7 +69,6 @@ footer{background:#142033;color:white;padding:40px 7%}
 <div class="hero-image">Lion<br>Scientific Heritage</div>
 </section>
 
-
 <section id="about">
 <h2>About the Founder</h2>
 <div class="about">
@@ -75,17 +77,18 @@ footer{background:#142033;color:white;padding:40px 7%}
 <h3 class="founder-name">Scarlett Zhang</h3>
 <p class="founder-title">Founder &amp; CEO</p>
 <p class="founder-credential">Licensed Veterinarian &amp; M.S. in Veterinary Medicine (Zhejiang University)</p>
-<p>With a background in veterinary medicine and years of experience in global human and veterinary IVD product management, I founded NostoLion with a simple belief: better science can create better healthcare solutions for animals and people.</p>
-<p>Driven by curiosity, clinical insight, and a passion for innovation, I connect trusted manufacturers, veterinary experts, and global partners to bring meaningful diagnostic solutions from ideas to real-world applications.</p>
+<p>With a background in veterinary medicine and years of experience in global human and veterinary IVD product management, I founded NostoLion with a simple belief: better science can create better outcomes for animal health.</p>
+<p>Driven by curiosity, clinical insight, and a passion for innovation, I connect trusted manufacturers, veterinary experts, and global partners to bring meaningful diagnostic solutions from ideas into real-world impact.</p>
 </div>
 </div>
 </section>
 
-
 <section id="knowledge">
-<h2>Knowledge Hub</h2>
+<div class="section-header">
+  <h2>Knowledge Hub</h2>
+  <a href="knowledge.html">View all articles →</a>
+</div>
 <div class="cards">
-  <!-- 匈牙利犬丝虫研究报告卡片 -->
   <div class="card">
     <img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/Gemini_Generated_Image_2heuuf2heuuf2heu.jfif" alt="Canine Dirofilariosis in Hungary">
     <div class="card-content">
@@ -96,7 +99,6 @@ footer{background:#142033;color:white;padding:40px 7%}
     </div>
   </div>
   
-  <!-- 预留卡片 2 -->
   <div class="card">
     <img src="article2.jpg" alt="Article 2">
     <div class="card-content">
@@ -107,7 +109,6 @@ footer{background:#142033;color:white;padding:40px 7%}
     </div>
   </div>
 
-  <!-- 预留卡片 3 -->
   <div class="card">
     <img src="article3.jpg" alt="Article 3">
     <div class="card-content">
@@ -119,7 +120,6 @@ footer{background:#142033;color:white;padding:40px 7%}
   </div>
 </div>
 </section>
-
 
 <section id="network">
 <h2>Global Clinical Network</h2>
@@ -133,7 +133,6 @@ footer{background:#142033;color:white;padding:40px 7%}
 </div>
 </section>
 
-
 <section id="products">
 <h2>Science-Driven Solutions</h2>
 <div class="cards">
@@ -142,7 +141,6 @@ footer{background:#142033;color:white;padding:40px 7%}
 <div class="card"><img src="product3.jpg"><div class="card-content"><h3>Solution Three</h3><p>Product introduction and scientific application.</p><a href="products.html">View Product →</a></div></div>
 </div>
 </section>
-
 
 <footer>
 <p>NostoLion © 2026</p>
