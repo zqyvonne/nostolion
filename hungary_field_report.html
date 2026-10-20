@@ -4,24 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Canine Dirofilariosis and Molecular Diagnosis - Field Research Report</title>
+  
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Ubuntu -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Chart.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- FontAwesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <script>
+    // Custom Tailwind Configuration aligned with index.html brand palette
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brandOrange: '#FF6900',
-            brandOrangeHover: '#E65100',
-            majolicaBlue: '#253B56',
-            majolicaDark: '#1B2B3E',
-            bodyText: '#334155',
-            bgLight: '#F8FAFC'
+            brandOrange: '#e87519',
+            brandDark: '#142033',
+            bodyText: '#142033',
+            bgLight: '#f8f4ec'
           },
           fontFamily: {
             ubuntu: ['Ubuntu', 'sans-serif']
@@ -34,18 +41,20 @@
   <style>
     body {
       font-family: 'Ubuntu', sans-serif;
-      color: #334155;
-      background-color: #F8FAFC;
+      color: #142033;
+      background-color: #f8f4ec;
     }
+
     .latin-species {
       font-style: italic;
     }
+
     ::-webkit-scrollbar {
       width: 6px;
       height: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #f1f1f1;
+      background: #f8f4ec;
     }
     ::-webkit-scrollbar-thumb {
       background: #CBD5E1;
@@ -54,6 +63,11 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #94A3B8;
     }
+
+    nav a:hover, nav a.active {
+      color: #e87519;
+    }
+
     @media print {
       .no-print { display: none !important; }
       body { background: white; color: black; }
@@ -63,71 +77,78 @@
 </head>
 <body class="bg-bgLight text-bodyText min-h-screen flex flex-col antialiased selection:bg-brandOrange selection:text-white">
 
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+  <!-- Fixed Top Navigation Bar (Consistent with index.html) -->
+  <nav class="sticky top-0 z-50 bg-[#f8f4ec] px-[6%] py-[18px] flex justify-between items-center shadow-sm border-b border-slate-200/60 no-print">
+    <div class="logo">
+      <a href="index.html"><img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/logo%E5%AD%97.png" alt="NostoLion Logo" class="w-[160px] block"></a>
+    </div>
+    <div class="hidden sm:flex space-x-[22px] font-medium text-[#142033]">
+      <a href="index.html" class="transition-colors">Home</a>
+      <a href="about.html" class="transition-colors">About</a>
+      <a href="knowledge.html" class="active transition-colors">Knowledge</a>
+      <a href="network.html" class="transition-colors">Network</a>
+      <a href="products.html" class="transition-colors">Products</a>
+    </div>
+  </nav>
+
+  <!-- Sub-Header / Print Action Bar -->
+  <header class="bg-white/80 border-b border-slate-200/80 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <span class="w-3 h-3 rounded-full bg-brandOrange animate-pulse"></span>
-        <span class="text-xs font-bold tracking-widest text-brandOrange uppercase">Research Publication</span>
+        <span class="w-2.5 h-2.5 rounded-full bg-brandOrange animate-pulse"></span>
+        <span class="text-xs font-bold tracking-widest text-brandOrange uppercase">Field Research Publication</span>
       </div>
-      <div class="flex items-center space-x-4">
-        <a href="index.html" class="no-print inline-flex items-center space-x-1 text-xs font-medium text-slate-600 hover:text-majolicaBlue bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-full transition-colors">
-          <i class="fa-solid fa-house"></i>
-          <span>Home</span>
-        </a>
-        <a href="knowledge.html" class="no-print inline-flex items-center space-x-1 text-xs font-medium text-slate-600 hover:text-majolicaBlue bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-full transition-colors">
-          <i class="fa-solid fa-book-open"></i>
-          <span>Knowledge Hub</span>
-        </a>
-        <button onclick="window.print()" class="no-print inline-flex items-center space-x-1 text-xs font-medium text-slate-600 hover:text-majolicaBlue bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-full transition-colors">
-          <i class="fa-solid fa-print"></i>
-          <span>Print / PDF</span>
-        </button>
-      </div>
+      <button onclick="window.print()" class="inline-flex items-center space-x-1.5 text-xs font-medium text-slate-600 hover:text-brandOrange bg-slate-100 hover:bg-slate-200 px-3 py-1 rounded-lg transition-colors">
+        <i class="fa-solid fa-print"></i>
+        <span>Print / PDF</span>
+      </button>
     </div>
   </header>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full no-print">
-    <nav class="text-sm text-slate-500 flex items-center gap-2 flex-wrap">
-      <a href="index.html" class="text-brandOrange hover:text-brandOrangeHover font-medium">Home</a>
-      <span>/</span>
-      <a href="knowledge.html" class="text-brandOrange hover:text-brandOrangeHover font-medium">Knowledge Hub</a>
-      <span>/</span>
-      <span class="text-slate-700 font-medium">Hungary Field Report</span>
-    </nav>
-  </div>
-
+  <!-- Main Container -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      
+      <!-- Sticky Sidebar / Table of Contents (Desktop) -->
       <aside class="hidden lg:block lg:col-span-3 no-print">
         <div class="sticky top-24 bg-white rounded-xl p-5 border border-slate-200/80 shadow-sm space-y-4">
           <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Contents</h3>
           <nav class="space-y-1 text-sm font-medium">
-            <a href="#section-0" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brandOrange transition-colors">0. Executive Summary</a>
-            <a href="#section-1" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brandOrange transition-colors">1. Overview & Zoonotic Significance</a>
-            <a href="#section-2" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brandOrange transition-colors">2. Clinical & Diagnostic Context</a>
-            <a href="#section-3" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brandOrange transition-colors">3. Diagnostic Methods Comparison</a>
-            <a href="#section-4" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brandOrange transition-colors">4. Field Observations</a>
-            <a href="#section-5" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brandOrange transition-colors">5. Testing Volume Trends</a>
-            <a href="#section-6" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brandOrange transition-colors">6. Market Sizing Signals</a>
-            <a href="#section-7" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brandOrange transition-colors">7. Implications & Questions</a>
-            <a href="#section-8" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-50 hover:text-brandOrange transition-colors">8. Limitations</a>
+            <a href="#section-0" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">0. Executive Summary</a>
+            <a href="#section-1" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">1. Overview & Zoonotic Significance</a>
+            <a href="#section-2" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">2. Clinical & Diagnostic Context</a>
+            <a href="#section-3" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">3. Diagnostic Methods Comparison</a>
+            <a href="#section-4" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">4. Field Observations</a>
+            <a href="#section-5" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">5. Testing Volume Trends</a>
+            <a href="#policy-comment" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">EU Policy Impact Comment</a>
+            <a href="#section-6" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">6. Market Sizing Signals</a>
+            <a href="#section-7" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">7. Implications & Questions</a>
+            <a href="#section-8" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">8. Limitations</a>
           </nav>
         </div>
       </aside>
 
+      <!-- Main Content Area -->
       <main class="lg:col-span-9 space-y-8">
+        
+        <!-- Document Title Header Block -->
         <header class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm relative overflow-hidden">
           <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-brandOrange/10 to-transparent rounded-bl-full pointer-events-none"></div>
-          <div class="inline-block bg-orange-50 border border-brandOrange/20 px-3 py-1 rounded-full text-xs font-regular uppercase tracking-wider text-brandOrange mb-4">
+          
+          <div class="inline-block bg-orange-50 border border-brandOrange/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-brandOrange mb-4">
             HUNGARY
           </div>
-          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-majolicaBlue leading-tight mb-3">
+
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brandDark leading-tight mb-3">
             Canine Dirofilariosis and Molecular Diagnosis
           </h1>
-          <p class="text-base sm:text-lg font-medium text-majolicaBlue/80 leading-relaxed">
+
+          <p class="text-base sm:text-lg font-medium text-brandDark/80 leading-relaxed">
             Field Research Report: Clinical Workflows, Species Differentiation, and Market Signals
           </p>
+
           <div class="my-6 border-b border-slate-200"></div>
+
           <div class="flex flex-wrap items-center gap-4 text-xs text-slate-500">
             <span class="flex items-center gap-1.5"><i class="fa-regular fa-calendar"></i> Field Survey Notes</span>
             <span class="flex items-center gap-1.5"><i class="fa-solid fa-microscope"></i> Veterinary Diagnostics</span>
@@ -135,34 +156,551 @@
           </div>
         </header>
 
+        <!-- Section 0: Executive Summary -->
         <section id="section-0" class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm">
           <div class="flex items-center space-x-3 mb-4">
-            <h2 class="text-lg font-bold text-majolicaBlue">Executive Summary & Key Diagnostic Challenges</h2>
+            <h2 class="text-lg font-bold text-brandDark">Executive Summary & Key Diagnostic Challenges</h2>
           </div>
-          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 text-sm leading-relaxed text-slate-700 space-y-3">
+          
+          <div class="p-4 bg-[#f8f4ec] rounded-xl border border-slate-200 text-sm leading-relaxed text-slate-700 space-y-3">
             <p>
-              The Hungarian field notes highlight a practical diagnostic challenge: canine infections involving 
-              <span class="italic font-medium text-majolicaBlue">Dirofilaria immitis</span> and 
-              <span class="italic font-medium text-majolicaBlue">Dirofilaria repens</span> may require different interpretations, 
-              while the source report states that the rapid antigen tests observed during the visit targeted 
-              <span class="italic font-medium text-majolicaBlue">D. immitis</span> and did not differentiate the two species.
+              The Hungarian field observations highlight a practical diagnostic challenge in European veterinary clinics. Climate change and the progressive restriction of certain mosquito-control insecticides in the EU over the past decade may have contributed to changing vector exposure patterns, underscoring the need for appropriate diagnostic strategies for canine infections caused by <span class="italic font-medium text-brandDark">Dirofilaria immitis</span> and <span class="italic font-medium text-brandDark">Dirofilaria repens</span>. The rapid antigen tests observed during the field visits targeted <span class="italic font-medium text-brandDark">D. immitis</span> and could not differentiate between the two species, highlighting the complementary role of species-specific diagnostic methods.
             </p>
             <p>
-              The visits also recorded substantial use of modified Knott's testing at one KOL-associated clinic and a reported increase in annual test volume from 
-              <span class="font-bold text-brandOrange">600–700 in 2023</span> to 
-              <span class="font-bold text-brandOrange">998 in 2024</span>. These observations suggest that species differentiation, confirmation pathways, and assay validation are important topics for both clinical and market development.
+              The visits also documented substantial use of the modified Knott’s test at one KOL-associated veterinary clinic, with reported annual test volumes increasing from <span class="font-bold text-brandOrange">600–700 in 2023</span> to <span class="font-bold text-brandOrange">998 in 2024</span>. These observations suggest that, in the current heartworm diagnostic landscape, species differentiation, diagnostic specificity, and standardized testing protocols across clinical settings warrant particular attention. The market opportunity may lie less in pursuing incremental improvements in antigen assay sensitivity and more in developing a practical molecular screening solution that is simple enough for routine veterinary use and capable of addressing diagnostic gaps that antigen-only testing cannot resolve.
             </p>
           </div>
         </section>
+
+        <!-- Section 1: Overview & Zoonotic Significance -->
+        <section id="section-1" class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-6">
+          <div class="border-b border-slate-100 pb-4">
+            <h2 class="text-xl sm:text-2xl font-bold text-brandDark flex items-center gap-2">
+              <span class="text-brandOrange">1.</span> Overview & Zoonotic Significance
+            </h2>
+          </div>
+
+          <div class="my-6 flex flex-col items-center justify-center">
+            <img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/diagnostic%20chart.jpg" alt="Diagnostic Chart" class="w-full max-w-4xl h-auto object-contain rounded-xl shadow-sm border border-slate-200/60 bg-white p-2">
+            <p class="text-xs text-slate-500 mt-2 font-medium">Figure: Diagnostic workflow and chart</p>
+          </div>
+
+          <!-- Feature Alert Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- D. Immitis Card -->
+            <div class="border border-slate-200 rounded-xl p-5 bg-gradient-to-b from-slate-50 to-white hover:border-brandOrange/40 transition-all">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-red-600 bg-red-50 border border-red-200 px-2.5 py-0.5 rounded-full">Cardiovascular Risk</span>
+                <i class="fa-solid fa-heart-pulse text-red-500 text-lg"></i>
+              </div>
+              <h3 class="text-lg font-bold text-brandDark mb-1">
+                <span class="italic">Dirofilaria immitis</span>
+              </h3>
+              <p class="text-xs text-slate-500 mb-3">Primary Disease: Heartworm Disease (Canine Heartworm)</p>
+              <ul class="text-xs text-slate-600 space-y-2">
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-circle-dot text-brandOrange mt-0.5 text-[10px]"></i>
+                  <span><strong>Pathology:</strong> Primarily targets and parasitizes the cardiovascular system.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-circle-dot text-brandOrange mt-0.5 text-[10px]"></i>
+                  <span><strong>Clinical Impact:</strong> Leads to severe cardiovascular disease, pulmonary arterial damage, and heart failure.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- D. Repens Card -->
+            <div class="border border-slate-200 rounded-xl p-5 bg-gradient-to-b from-slate-50 to-white hover:border-brandOrange/40 transition-all">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full">Subcutaneous & Zoonotic</span>
+                <i class="fa-solid fa-bug text-amber-500 text-lg"></i>
+              </div>
+              <h3 class="text-lg font-bold text-brandDark mb-1">
+                <span class="italic">Dirofilaria repens</span>
+              </h3>
+              <p class="text-xs text-slate-500 mb-3">Primary Disease: Subcutaneous Dirofilariasis</p>
+              <ul class="text-xs text-slate-600 space-y-2">
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-circle-dot text-brandOrange mt-0.5 text-[10px]"></i>
+                  <span><strong>Pathology:</strong> Adult worms parasitize subcutaneous tissues long-term.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-circle-dot text-brandOrange mt-0.5 text-[10px]"></i>
+                  <span><strong>Symptoms:</strong> Multifocal alopecia (patchy hair loss) and skin breakdown/ulceration.</span>
+                </li>
+                <li class="flex items-start gap-2 text-amber-700 bg-amber-50 p-2 rounded border border-amber-100">
+                  <i class="fa-solid fa-triangle-exclamation mt-0.5"></i>
+                  <span><strong>Clinical Pitfall:</strong> Subcutaneous nodules are frequently misdiagnosed as tumors (neoplasms).</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Zoonotic Note Banner -->
+          <div class="p-4 rounded-xl border border-orange-200 bg-orange-50/40 flex items-start gap-3">
+            <i class="fa-solid fa-eye text-brandOrange text-lg mt-0.5"></i>
+            <div class="text-xs text-slate-700 space-y-1">
+              <p class="font-bold text-brandDark">Ocular Migration & Zoonotic Vector:</p>
+              <p>
+                Larvae and adult worms of <span class="italic">Dirofilaria</span> species can undergo cutaneous or visceral migration. 
+                Notably, parasites can migrate to the eye structure causing <strong>Ocular Dirofilariasis</strong>. 
+                Both parasites pose zoonotic risks, making accurate canine screening essential for public health protection.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Clinical & Diagnostic Context -->
+        <section id="section-2" class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+          <div class="border-b border-slate-100 pb-4">
+            <h2 class="text-xl sm:text-2xl font-bold text-brandDark flex items-center gap-2">
+              <span class="text-brandOrange">2.</span> Clinical and Diagnostic Context
+            </h2>
+          </div>
+          
+          <p class="text-sm text-slate-700 leading-relaxed">
+            <span class="italic font-semibold">Dirofilaria immitis</span> is associated with canine heartworm disease, whereas 
+            <span class="italic font-semibold">Dirofilaria repens</span> is associated with subcutaneous dirofilariosis and is zoonotic. 
+            The original field research notes that clinical signs may overlap with other parasitic conditions, making species-level differentiation highly relevant in selected cases.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 border-l-4 border-brandOrange bg-[#f8f4ec] rounded-r-xl">
+              <h4 class="text-xs font-bold text-brandDark uppercase tracking-wider mb-1">Microscopy Challenges</h4>
+              <p class="text-xs text-slate-600">
+                While microscopic examination is widely taught, reliable morphological differentiation between microfilariae requires substantial expertise and specialized training.
+              </p>
+            </div>
+            <div class="p-4 border-l-4 border-brandDark bg-[#f8f4ec] rounded-r-xl">
+              <h4 class="text-xs font-bold text-brandDark uppercase tracking-wider mb-1">Molecular Testing Integration</h4>
+              <p class="text-xs text-slate-600">
+                Molecular assays (PCR/POCT) offer absolute species differentiation, addressing the cross-reactivity and diagnostic ambiguity inherent in standard rapid immunochromatographic assays.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Diagnostic Methods Comparison -->
+        <section id="section-3" class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+          <div class="border-b border-slate-100 pb-4">
+            <h2 class="text-xl sm:text-2xl font-bold text-brandDark flex items-center gap-2">
+              <span class="text-brandOrange">3.</span> Diagnostic Methods Comparison
+            </h2>
+          </div>
+
+          <!-- Comparison Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="bg-brandDark text-white">
+                  <th class="p-3 font-semibold rounded-tl-lg">Method</th>
+                  <th class="p-3 font-semibold">Primary Target</th>
+                  <th class="p-3 font-semibold">Species Differentiation</th>
+                  <th class="p-3 font-semibold">Ease of Use</th>
+                  <th class="p-3 font-semibold rounded-tr-lg">Limitations</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 border-b border-slate-200">
+                <tr class="hover:bg-orange-50/30 transition-colors">
+                  <td class="p-3 font-bold text-brandDark">Antigen Rapid Tests</td>
+                  <td class="p-3"><span class="italic">D. immitis</span> adult female antigen</td>
+                  <td class="p-3"><span class="text-red-500 font-semibold"><i class="fa-solid fa-xmark"></i> No</span> (Target specific)</td>
+                  <td class="p-3"><span class="text-emerald-600 font-semibold"><i class="fa-solid fa-check"></i> Very High</span> (In-clinic)</td>
+                  <td class="p-3 text-slate-500">Misses <span class="italic">D. repens</span>; potential occult infections or low worm load false negatives.</td>
+                </tr>
+                <tr class="hover:bg-orange-50/30 transition-colors">
+                  <td class="p-3 font-bold text-brandDark">Modified Knott’s Test</td>
+                  <td class="p-3">Circulating microfilariae concentration</td>
+                  <td class="p-3"><span class="text-amber-600 font-semibold"><i class="fa-solid fa-triangle-exclamation"></i> Moderate</span> (Morphology)</td>
+                  <td class="p-3"><span class="text-blue-600 font-semibold"><i class="fa-solid fa-check"></i> Moderate</span></td>
+                  <td class="p-3 text-slate-500">Requires manual labor and high skill to measure tail/head dimensions.</td>
+                </tr>
+                <tr class="hover:bg-orange-50/30 transition-colors">
+                  <td class="p-3 font-bold text-brandDark">Direct Blood Smear</td>
+                  <td class="p-3">Motile microfilariae</td>
+                  <td class="p-3"><span class="text-red-500 font-semibold"><i class="fa-solid fa-xmark"></i> Poor</span></td>
+                  <td class="p-3"><span class="text-emerald-600 font-semibold"><i class="fa-solid fa-check"></i> Very High</span></td>
+                  <td class="p-3 text-slate-500">Low sensitivity; frequently yields false negatives in low microfilaria counts.</td>
+                </tr>
+                <tr class="hover:bg-orange-50/30 transition-colors">
+                  <td class="p-3 font-bold text-brandDark">Molecular Diagnostics (Lab PCR)</td>
+                  <td class="p-3">Parasite DNA sequences</td>
+                  <td class="p-3"><span class="text-emerald-600 font-bold"><i class="fa-solid fa-check-double"></i> Absolute</span></td>
+                  <td class="p-3"><span class="text-slate-500 font-semibold">Low</span> (Lab dependent)</td>
+                  <td class="p-3 text-slate-500">Higher cost, requires external reference lab or advanced lab equipment.</td>
+                </tr>
+                <!-- Added Molecular POCT Row -->
+                <tr class="hover:bg-orange-50/30 transition-colors bg-orange-50/20">
+                  <td class="p-3 font-bold text-brandOrange flex items-center gap-1.5">
+                    <i class="fa-solid fa-bolt text-brandOrange"></i>
+                    <span>Molecular POCT</span>
+                  </td>
+                  <td class="p-3">Parasite DNA / RNA Target Sequences</td>
+                  <td class="p-3"><span class="text-emerald-600 font-bold"><i class="fa-solid fa-check-double"></i> Absolute</span></td>
+                  <td class="p-3"><span class="text-emerald-600 font-semibold"><i class="fa-solid fa-check"></i> High</span> (Point-of-Care)</td>
+                  <td class="p-3 text-slate-500">Higher initial device/reagent cost; rapidly expanding in clinical availability.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Section 4: Field Observations -->
+        <section id="section-4" class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+          <div class="border-b border-slate-100 pb-4">
+            <h2 class="text-xl sm:text-2xl font-bold text-majolicaBlue flex items-center gap-2">
+              <span class="text-brandOrange">4.</span> Field Observations from Two Veterinary Hospitals
+            </h2>
+          </div>
+
+          <div style="text-align: center; margin: 25px 0;">
+                <img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/colloidal%20gold%20miss.jpg" alt="Field Observations and Life Cycle Diagram" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <p style="font-size: 13px; color: #64748b; margin-top: 8px;">Figure: Clinical Status Quo & Diagnostic Challenges</p>
+            </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Hospital A -->
+            <div class="border border-slate-200 rounded-xl p-5 space-y-3 bg-slate-50/50">
+              <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-hospital text-brandOrange"></i>
+                <h3 class="font-bold text-majolicaBlue text-sm">Hospital A (KOL Clinic)</h3>
+              </div>
+              <ul class="text-xs text-slate-600 space-y-2">
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-arrow-right text-brandOrange mt-0.5"></i>
+                  <span>Heavy reliance on combined modified Knott's technique for microfilaria detection.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-arrow-right text-brandOrange mt-0.5"></i>
+                  <span>High annual sample throughput due to regional referral status.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-arrow-right text-brandOrange mt-0.5"></i>
+                  <span>Emphasis on secondary molecular confirmation when rapid kits show ambiguous results.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Hospital B -->
+            <div class="border border-slate-200 rounded-xl p-5 space-y-3 bg-slate-50/50">
+              <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-clinic-medical text-majolicaBlue"></i>
+                <h3 class="font-bold text-majolicaBlue text-sm">Hospital B (General Practice)</h3>
+              </div>
+              <ul class="text-xs text-slate-600 space-y-2">
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-arrow-right text-majolicaBlue mt-0.5"></i>
+                  <span>Rapid antigen cassette testing used as primary point-of-care tool.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-arrow-right text-majolicaBlue mt-0.5"></i>
+                  <span>Limited microscopic species identification due to time/staff constraints.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-arrow-right text-majolicaBlue mt-0.5"></i>
+                  <span>High interest in affordable multiplex kits capable of identifying both species concurrently.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 5: Modified Knott's Testing Volume and Reported Trends -->
+        <!-- Desktop layout: Chart : Image = 1 : 2 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+
+          <!-- Left Column: Chart (1/3 width) -->
+          <div class="lg:col-span-1 min-w-0 bg-slate-50 rounded-xl p-4 sm:p-5 border border-slate-200 flex flex-col">
+
+            <div class="flex flex-col items-start gap-2 mb-3">
+              <div>
+                <h3 class="text-xs font-bold text-majolicaBlue uppercase tracking-wider">
+                  Annual Modified Knott's Test Count
+                </h3>
+                <p class="text-[11px] text-slate-500 mt-1">
+                  Reported clinical volume & 2025 estimate
+                </p>
+              </div>
+
+              <span class="inline-flex items-center gap-1 bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-1 rounded-full">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                +42.6% to +66.3% YoY
+              </span>
+            </div>
+
+            <div class="relative w-full flex-1 min-h-[240px] h-64">
+              <canvas id="volumeChart"></canvas>
+            </div>
+
+            <p class="text-[10px] text-slate-500 leading-relaxed mt-3">
+              2023: 600–700 reported tests; 2024: 998 reported tests;
+              2025: approximately 1,500 estimated tests.
+            </p>
+          </div>
+
+          <!-- Right Column: Image (2/3 width) -->
+          <div class="lg:col-span-2 min-w-0 bg-slate-50 rounded-xl p-4 sm:p-5 border border-slate-200 flex flex-col items-center justify-center">
+
+            <div class="w-full flex-1 flex items-center justify-center">
+              <img
+                src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/poct%20vs%20lab%20pcr.jpg"
+                alt="Comparison of point-of-care testing and laboratory PCR"
+                class="block w-full h-auto max-h-[420px] object-contain rounded-lg shadow-sm border border-slate-200/60"
+                loading="lazy"
+              >
+            </div>
+
+            <span class="text-xs text-slate-500 mt-3 font-medium text-center">
+              Figure: POCT vs. Laboratory PCR Comparison
+            </span>
+          </div>
+
+        </div>
+
+        <script>
+        (function () {
+          const canvas = document.getElementById('volumeChart');
+
+          if (!canvas || typeof Chart === 'undefined') return;
+
+          // Prevent duplicate chart initialization if this section is re-rendered.
+          const existingChart = Chart.getChart(canvas);
+          if (existingChart) existingChart.destroy();
+
+          new Chart(canvas, {
+            type: 'bar',
+            data: {
+              labels: ['2023', '2024', ['2025', '(Est.)']],
+              datasets: [{
+                label: 'Annual test count',
+                data: [650, 998, 1500],
+                backgroundColor: [
+                  '#94A3B8',
+                  '#287D78',
+                  '#F97316'
+                ],
+                borderColor: [
+                  '#64748B',
+                  '#287D78',
+                  '#EA580C'
+                ],
+                borderWidth: 1,
+                borderRadius: 5,
+                barPercentage: 0.62,
+                categoryPercentage: 0.72
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: {
+                  display: false
+                },
+                tooltip: {
+                  callbacks: {
+                    label: function(context) {
+                      const index = context.dataIndex;
+                      if (index === 0) return 'Reported range: 600–700 tests';
+                      if (index === 1) return 'Reported: 998 tests';
+                      return 'Estimate: approximately 1,500 tests';
+                    }
+                  }
+                }
+              },
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  max: 1800,
+                  ticks: {
+                    stepSize: 300,
+                    color: '#64748B',
+                    font: { size: 10 }
+                  },
+                  grid: {
+                    color: 'rgba(148, 163, 184, 0.18)'
+                  },
+                  border: {
+                    display: false
+                  }
+                },
+                x: {
+                  ticks: {
+                    color: '#475569',
+                    font: { size: 10, weight: '600' }
+                  },
+                  grid: {
+                    display: false
+                  },
+                  border: {
+                    display: false
+                  }
+                }
+              }
+            }
+          });
+        })();
+        </script>
+
+        <!-- Section 6: Indicative Market Sizing -->
+        <section id="section-6" class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-6">
+          <div class="border-b border-slate-100 pb-4">
+            <h2 class="text-xl sm:text-2xl font-bold text-majolicaBlue flex items-center gap-2">
+              <span class="text-brandOrange">6.</span> Indicative Market Sizing Recorded in Source
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="p-4 bg-orange-50/60 border border-orange-100 rounded-xl text-center">
+              <span class="text-xs text-slate-500 font-medium block mb-1">Annual Screening Growth</span>
+              <span class="text-2xl font-bold text-brandOrange">~50%</span>
+              <span class="text-[10px] text-slate-400 block mt-1">Observed YoY Clinic Demand</span>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl text-center">
+              <span class="text-xs text-slate-500 font-medium block mb-1">Co-Infection Rate</span>
+              <span class="text-2xl font-bold text-majolicaBlue">High Risk</span>
+              <span class="text-[10px] text-slate-400 block mt-1"><span class="italic">D. immitis</span> + <span class="italic">D. repens</span></span>
+            </div>
+            <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl text-center">
+              <span class="text-xs text-slate-500 font-medium block mb-1">Assay Gap Signal</span>
+              <span class="text-2xl font-bold text-majolicaBlue">Single-Target</span>
+              <span class="text-[10px] text-slate-400 block mt-1">Current market mostly Antigen-only</span>
+            </div>
+          </div>
+
+          <!-- 宽度撑满整个区块大模块的图片 -->
+          <div class="w-full flex flex-col items-center justify-center pt-2">
+            <img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/future.jpg" alt="Future Market Outlook" class="w-full h-auto object-contain rounded-xl shadow-sm border border-slate-200/60 bg-white p-2">
+            <p class="text-xs text-slate-500 mt-2 font-medium">Figure: Future market trends and outlook</p>
+          </div>
+        </section>
+
+        <!-- Section 7: Implications and Research Questions -->
+        <section id="section-7" class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+          <div class="border-b border-slate-100 pb-4">
+            <h2 class="text-xl sm:text-2xl font-bold text-majolicaBlue flex items-center gap-2">
+              <span class="text-brandOrange">7.</span> Implications & Research Questions
+            </h2>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+              <div class="w-6 h-6 rounded-full bg-brandOrange/10 text-brandOrange flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">1</div>
+              <p class="text-xs text-slate-700 leading-relaxed">
+                <strong>Assay Differentiation Need:</strong> How can diagnostic manufacturers optimize affordable point-of-care tests to distinguish <span class="italic">D. immitis</span> from <span class="italic">D. repens</span> without adding extreme cost?
+              </p>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+              <div class="w-6 h-6 rounded-full bg-brandOrange/10 text-brandOrange flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">2</div>
+              <p class="text-xs text-slate-700 leading-relaxed">
+                <strong>Treatment Protocols:</strong> Given that <span class="italic">D. repens</span> requires different therapeutic management than severe heartworm disease, does non-differentiated screening lead to inappropriate medication regimes?
+              </p>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-lg bg-slate-50 border border-slate-200/80">
+              <div class="w-6 h-6 rounded-full bg-brandOrange/10 text-brandOrange flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">3</div>
+              <p class="text-xs text-slate-700 leading-relaxed">
+                <strong>Zoonotic Surveillance:</strong> What role should veterinary clinics play in tracking <span class="italic">D. repens</span> as a reservoir for human subcutaneous/ocular infections?
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 8: Limitations -->
+        <section id="section-8" class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-4">
+          <div class="border-b border-slate-100 pb-4">
+            <h2 class="text-xl sm:text-2xl font-bold text-majolicaBlue flex items-center gap-2">
+              <span class="text-brandOrange">8.</span> Limitations
+            </h2>
+          </div>
+
+          <div class="p-4 bg-amber-50/50 border border-amber-200/60 rounded-xl text-xs text-amber-900 leading-relaxed space-y-2">
+            <p>
+              <i class="fa-solid fa-circle-info text-amber-600 mr-1"></i>
+              <strong>Scope Constraints:</strong> This field report is based on observational site visits to two veterinary clinics in Hungary and localized KOL figures.
+            </p>
+            <p>
+              Data regarding test volumes (600–700 in 2023 to 998 in 2024) reflects site-specific records and should not be generalized to national Hungarian veterinary market totals without broader epidemiological sampling.
+            </p>
+          </div>
+        </section>
+
       </main>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer class="bg-majolicaDark text-white mt-12 py-8 border-t border-slate-800 no-print">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-400 space-y-2">
       <p>Independent Field Research Document &bull; Hungarian Canine Dirofilariosis Study</p>
-      <p class="text-slate-500">Styled with Ubuntu & Pantone 1505 C / Majolica Blue Palette</p>
+      <p class="text-slate-500">Nostolion Copyright 2026 - Contact: zqyvonne@gmail.com </p>
     </div>
   </footer>
+
+  <!-- Chart.js Script Logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const ctx = document.getElementById('volumeChart').getContext('2d');
+      
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: [ '2023', '2024'],
+          datasets: [{
+            label: 'Modified Knott’s Annual Test Count',
+            data: [600, 700, 998],
+            backgroundColor: [
+              'rgba(37, 59, 86, 0.6)',
+              'rgba(37, 59, 86, 0.8)',
+              'rgba(255, 105, 0, 0.9)'
+            ],
+            borderColor: [
+              '#253B56',
+              '#253B56',
+              '#FF6900'
+            ],
+            borderWidth: 1.5,
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              backgroundColor: '#1B2B3E',
+              titleFont: { family: 'Ubuntu', size: 12 },
+              bodyFont: { family: 'Ubuntu', size: 12 },
+              padding: 10,
+              displayColors: false
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              grid: {
+                color: '#E2E8F0'
+              },
+              ticks: {
+                font: { family: 'Ubuntu', size: 11 },
+                color: '#64748B'
+              }
+            },
+            x: {
+              grid: {
+                display: false
+              },
+              ticks: {
+                font: { family: 'Ubuntu', size: 11 },
+                color: '#64748B'
+              }
+            }
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
