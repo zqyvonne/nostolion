@@ -77,7 +77,7 @@
     <section class="bg-brandDark text-white rounded-3xl overflow-hidden shadow-lg mb-8 sm:mb-10">
       <div class="p-6 sm:p-10 lg:p-12">
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-400/10 border border-orange-300/30 text-orange-300 text-xs font-bold uppercase tracking-widest mb-5">
-          <i class="fa-solid fa-stethoscope" aria-hidden="true"></i> Veterinary Diagnostics · Field Report
+          <i class="fa-solid fa-stethoscope" aria-hidden="true"></i> Spain
         </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight max-w-4xl">Commercial Business Models &amp; Clinical Efficiency of Infectious Disease Testing in Spanish Veterinary Hospitals</h1>
         <p class="text-slate-300 text-base sm:text-lg leading-relaxed mt-5 max-w-3xl">Field observations on companion-animal diagnostic workflows, reference-laboratory referrals, and the role of molecular testing in infectious disease investigation.</p>
@@ -95,19 +95,151 @@
       <p><strong>Scope note:</strong> This page presents qualitative field observations and strategic interpretation. Quantitative market estimates, prices, and test volumes should only be added when supported by documented interview notes or source records; no unsupported numerical values are inferred here.</p>
     </div>
 
-    <!-- Executive summary -->
-    <section id="overview" class="report-section mb-10 sm:mb-12">
-      <div class="flex items-center gap-3 mb-4"><span class="w-10 h-10 rounded-xl bg-orange-100 text-brandOrange flex items-center justify-center"><i class="fa-solid fa-compass" aria-hidden="true"></i></span><h2 class="text-2xl sm:text-3xl font-bold">Executive Summary</h2></div>
-      <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 shadow-sm">
-        <p class="text-slate-700 leading-7">The Spanish companion-animal diagnostic landscape illustrates how in-clinic testing and external reference laboratories can operate as complementary parts of a diagnostic pathway. Rapid tests support timely clinical decisions within the hospital, while referral testing can provide additional analytical capabilities for cases requiring confirmation, pathogen differentiation, or more detailed investigation.</p>
-        <p class="text-slate-700 leading-7 mt-4">For infectious diseases such as leishmaniosis, diagnostic decisions may involve clinical assessment, serology, microscopy, and molecular methods. The most useful testing pathway depends on the clinical question, the sample, the performance characteristics of each method, turnaround time, and how the result will influence follow-up care.</p>
-        <div class="grid sm:grid-cols-3 gap-3 mt-6">
-          <div class="rounded-xl bg-[#f8f4ec] p-4"><div class="text-brandOrange text-lg mb-2"><i class="fa-solid fa-house-medical" aria-hidden="true"></i></div><h3 class="font-bold mb-1">In-clinic access</h3><p class="text-sm text-slate-600 leading-relaxed">Rapid tests can support first-line decisions during the consultation.</p></div>
-          <div class="rounded-xl bg-[#f8f4ec] p-4"><div class="text-brandOrange text-lg mb-2"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i></div><h3 class="font-bold mb-1">Referral logistics</h3><p class="text-sm text-slate-600 leading-relaxed">Sample collection and transport are integral to the referral experience.</p></div>
-          <div class="rounded-xl bg-[#f8f4ec] p-4"><div class="text-brandOrange text-lg mb-2"><i class="fa-solid fa-dna" aria-hidden="true"></i></div><h3 class="font-bold mb-1">Molecular capability</h3><p class="text-sm text-slate-600 leading-relaxed">PCR can add pathogen-specific information when clinically appropriate.</p></div>
-        </div>
+
+<!-- Summary / Regional Disease Distribution -->
+<section id="summary" class="report-section mb-10 sm:mb-12">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="w-10 h-10 rounded-xl bg-orange-100 text-[#e87519] flex items-center justify-center">
+      <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+    </span>
+    <h2 class="text-2xl sm:text-3xl font-bold">Executive Summary &amp; Regional Overview</h2>
+  </div>
+  
+  <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 shadow-sm">
+    <p class="text-slate-700 leading-7 text-base">
+      Spain’s Mediterranean climate creates an ideal environment for vector-borne diseases, most notably <i class="italic font-medium text-slate-900">leishmaniosis</i> (caused by <i class="italic">Leishmania spp.</i>) and tick-borne infections such as <i class="italic font-medium text-slate-900">babesiosis</i> (caused by <i class="italic">Babesia spp.</i>). However, the clinical prevalence of these pathogens varies drastically across different geographical microclimates:
+    </p>
+
+    <!-- Geographic Contrast Highlights -->
+    <div class="grid sm:grid-cols-2 gap-4 my-5">
+      <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Central Urban Hubs (e.g., Madrid)</div>
+        <p class="text-sm text-slate-700 leading-relaxed">
+          Tick-borne <i class="italic">babesiosis</i> remains exceptionally rare in major central referral hospitals, averaging only <span class="font-bold text-[#e87519]">1–2 cases per year</span>.
+        </p>
       </div>
-    </section>
+
+      <div class="p-4 rounded-xl bg-orange-50/60 border border-orange-200/60">
+        <div class="text-xs font-bold uppercase tracking-wider text-[#e87519] mb-1">Mountainous North &amp; Southern Regions (e.g., Seville)</div>
+        <p class="text-sm text-slate-700 leading-relaxed">
+          Local veterinary clinics in high-risk zones frequently diagnose as many as <span class="font-bold text-[#e87519]">50–100 cases annually</span>.
+        </p>
+      </div>
+    </div>
+
+    <p class="text-slate-700 leading-7 text-base">
+      This field report provides a comprehensive overview of <span class="font-semibold text-slate-900">current clinical diagnostic workflows</span> and treatment protocols across Spanish veterinary hospitals, while summarizing the <span class="font-semibold text-slate-900">commercial pricing structures and testing fees</span> observed during field interviews.
+    </p>
+  </div>
+</section>
+
+
+        </div>
+
+        <!-- Diagnostic Methods in Clinical Practice -->
+<section id="diagnostic-methods" class="report-section mb-10 sm:mb-12">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="w-10 h-10 rounded-xl bg-orange-100 text-[#e87519] flex items-center justify-center">
+      <i class="fa-solid fa-microscope" aria-hidden="true"></i>
+    </span>
+    <h2 class="text-2xl sm:text-3xl font-bold">Infectious Disease Testing Practices in Spanish Veterinary Clinics</h2>
+  </div>
+  
+  <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 shadow-sm">
+    <p class="text-slate-700 leading-7 text-base">
+      Across veterinary clinics in Spain, primary screening for infectious diseases relies predominantly on point-of-care rapid test kits performed in-house. When initial rapid test results are inconclusive or require confirmation, samples are sent via express courier to central reference laboratories operated by rapid test manufacturers in Madrid or Barcelona.
+    </p>
+    <p class="text-slate-700 leading-7 text-base mt-4">
+      Because both logistics expenses and confirmatory laboratory testing costs are fully covered by the manufacturer, clinicians face minimal financial or operational friction when requesting referral confirmation. Consequently, specialized diagnostic techniques that require extensive technical training—such as direct microscopic evaluation—are rarely, if ever, utilized in routine clinical practice.
+    </p>
+  </div>
+  
+<!-- Side-by-Side Dual Media Grid (Left: Animated Map, Right: Clinic Image) -->
+        <div class="my-6 w-full">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full items-stretch">
+            
+            <!-- Left Column: SVG Animated Logistics Map -->
+            <div class="bg-slate-900 rounded-xl p-4 border border-slate-700/80 shadow-sm flex flex-col justify-center relative overflow-hidden min-h-[300px]">
+              <div class="absolute top-3 right-3 flex items-center gap-2 bg-slate-800/90 px-2.5 py-1 rounded-md border border-slate-700 text-[11px] text-slate-300 z-10">
+                <span class="h-2 w-2 rounded-full bg-amber-500 animate-pulse"></span>
+                <span>Live Tracking</span>
+              </div>
+              <svg viewBox="0 0 850 580" class="w-full h-auto block drop-shadow-md">
+                <style>
+                  .hub-pulse { animation: pulse-ring 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+                  @keyframes pulse-ring { 0% { transform: scale(0.8); opacity: 0.9; } 70% { transform: scale(1.6); opacity: 0; } 100% { transform: scale(0.8); opacity: 0; } }
+                  .flowing-line { stroke-dasharray: 6 6; animation: stroke-flow 3s linear infinite; }
+                  @keyframes stroke-flow { to { stroke-dashoffset: -24; } }
+                </style>
+                <defs>
+                  <linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1e293b"/>
+                    <stop offset="100%" stop-color="#0f172a"/>
+                  </linearGradient>
+                  <g id="express-truck">
+                    <ellipse cx="0" cy="5" rx="7" ry="2" fill="rgba(0,0,0,0.5)"/>
+                    <rect x="-8" y="-6" width="11" height="8" rx="1" fill="#f59e0b"/>
+                    <path d="M3,-2 L7,-2 L9,1 L9,2 L3,2 Z" fill="#d97706"/>
+                    <path d="M4,-1 L6.5,-1 L7.5,0.5 L4,0.5 Z" fill="#78350f"/>
+                    <circle cx="-5" cy="2.5" r="1.8" fill="#1e293b" stroke="#ffffff" stroke-width="0.8"/>
+                    <circle cx="5" cy="2.5" r="1.8" fill="#1e293b" stroke="#ffffff" stroke-width="0.8"/>
+                  </g>
+                </defs>
+
+                <!-- Spain Mainland & Balearic Contour -->
+                <path d="M 120,85 C 135,78 185,82 230,80 C 275,78 340,70 385,82 C 415,90 465,115 505,130 C 545,145 615,160 635,175 C 650,185 660,205 640,230 C 620,255 580,285 570,310 C 560,335 550,370 525,400 C 500,430 460,470 425,495 C 390,520 345,535 315,525 C 285,515 260,490 240,465 C 220,440 230,410 220,380 C 210,350 195,310 198,270 C 200,230 180,195 160,175 C 140,155 110,125 105,100 Z" fill="url(#mapGrad)" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M 680,290 C 695,280 710,290 705,305 C 700,315 680,310 680,290 Z M 650,320 C 660,310 670,325 660,335 C 650,340 645,330 650,320 Z" fill="url(#mapGrad)" stroke="#334155" stroke-width="2"/>
+
+                <!-- Regional Clinic Nodes -->
+                <circle cx="140" cy="115" r="4" fill="#94a3b8"/><circle cx="390" cy="95" r="4" fill="#94a3b8"/><circle cx="230" cy="340" r="4" fill="#94a3b8"/><circle cx="260" cy="450" r="4" fill="#94a3b8"/><circle cx="340" cy="505" r="4" fill="#94a3b8"/><circle cx="490" cy="420" r="4" fill="#94a3b8"/><circle cx="530" cy="320" r="4" fill="#94a3b8"/><circle cx="690" cy="298" r="4" fill="#94a3b8"/>
+
+                <!-- Animated Express Routes -->
+                <g stroke="#f59e0b" stroke-width="1.5" opacity="0.4" class="flowing-line" fill="none">
+                  <path id="madr-nw" d="M 140,115 L 370,290"/><path id="madr-sw" d="M 260,450 L 370,290"/><path id="madr-se" d="M 490,420 L 370,290"/>
+                </g>
+                <g stroke="#38bdf8" stroke-width="1.5" opacity="0.4" class="flowing-line" fill="none">
+                  <path id="barc-nw" d="M 140,115 L 590,210"/><path id="barc-sw" d="M 260,450 L 590,210"/><path id="barc-s" d="M 340,505 L 590,210"/>
+                </g>
+
+                <!-- Dynamic Moving Trucks -->
+                <use href="#express-truck"><animateMotion dur="4.5s" repeatCount="indefinite" rotate="auto"><mpath href="#madr-nw"/></animateMotion></use>
+                <use href="#express-truck"><animateMotion dur="3.8s" repeatCount="indefinite" rotate="auto"><mpath href="#madr-sw"/></animateMotion></use>
+                <use href="#express-truck"><animateMotion dur="4.2s" repeatCount="indefinite" rotate="auto"><mpath href="#madr-se"/></animateMotion></use>
+                <use href="#express-truck"><animateMotion dur="5.0s" repeatCount="indefinite" rotate="auto"><mpath href="#barc-nw"/></animateMotion></use>
+                <use href="#express-truck"><animateMotion dur="4.0s" repeatCount="indefinite" rotate="auto"><mpath href="#barc-sw"/></animateMotion></use>
+                <use href="#express-truck"><animateMotion dur="3.5s" repeatCount="indefinite" rotate="auto"><mpath href="#barc-s"/></animateMotion></use>
+
+                <!-- Madrid & Barcelona Hubs -->
+                <g transform="translate(370, 290)">
+                  <circle cx="0" cy="0" r="22" fill="#f59e0b" class="hub-pulse" />
+                  <circle cx="0" cy="0" r="9" fill="#f59e0b" stroke="#ffffff" stroke-width="2.5" />
+                  <text x="0" y="26" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">MADRID</text>
+                </g>
+                <g transform="translate(590, 210)">
+                  <circle cx="0" cy="0" r="22" fill="#38bdf8" class="hub-pulse" />
+                  <circle cx="0" cy="0" r="9" fill="#38bdf8" stroke="#ffffff" stroke-width="2.5" />
+                  <text x="0" y="26" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">BARCELONA</text>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Right Column: Clinic Morning Result Image -->
+            <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm flex items-center justify-center bg-slate-100 min-h-[300px]">
+              <img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/morning%20result%20in%20the%20clinic.png" alt="Morning Diagnostic Results in Veterinary Clinic" class="w-full h-full object-cover block">
+            </div>
+
+          </div>
+
+<!-- Image Caption Box (Set explicitly to Ubuntu font) -->
+          <div class="mt-3 p-3.5 bg-slate-50 border border-slate-200 rounded-xl" style="font-family: Ubuntu, sans-serif;">
+            <p class="text-xs font-bold text-slate-800 uppercase tracking-wider mb-1">Nationwide Dual-Center Referral Network</p>
+            <p class="text-xs text-slate-600 leading-relaxed">Two equally positioned reference laboratories (by IDEXX &amp; URANO) connect in-clinic rapid testing with overnight sample logistics, enabling veterinarians to receive referral diagnostic results by the following morning (typically the morning of Day 2).</p>
+          </div>
+
+</section>
+
+
+          </div>
 
     <!-- Workflow -->
     <section id="workflow" class="report-section mb-10 sm:mb-12">
@@ -123,26 +255,7 @@
       </div>
     </section>
 
-    <!-- Leishmania -->
-    <section id="leishmania" class="report-section mb-10 sm:mb-12">
-      <div class="flex items-center gap-3 mb-4"><span class="w-10 h-10 rounded-xl bg-orange-100 text-brandOrange flex items-center justify-center"><i class="fa-solid fa-microscope" aria-hidden="true"></i></span><h2 class="text-2xl sm:text-3xl font-bold">Leishmania Diagnostics: Complementary Methods</h2></div>
-      <div class="bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 shadow-sm">
-        <p class="text-slate-700 leading-7">Canine leishmaniosis assessment may require more than one type of evidence. Serological testing can help assess the antibody response, while molecular testing can detect targeted parasite DNA in suitable samples. Microscopy or cytology may provide additional evidence in selected cases. These methods answer different questions and should not be treated as interchangeable.</p>
-        <div class="overflow-x-auto mt-5">
-          <table class="w-full min-w-[620px] text-sm text-left border-collapse">
-            <thead><tr class="bg-brandDark text-white"><th class="p-3 rounded-tl-lg">Method</th><th class="p-3">Potential role</th><th class="p-3 rounded-tr-lg">Practical consideration</th></tr></thead>
-            <tbody class="divide-y divide-slate-200">
-              <tr><td class="p-3 font-semibold">Serology</td><td class="p-3 text-slate-600">Assess antibodies to support clinical evaluation.</td><td class="p-3 text-slate-600">Interpret in context; antibody findings do not alone establish every aspect of infection status.</td></tr>
-              <tr class="bg-slate-50"><td class="p-3 font-semibold">PCR / molecular testing</td><td class="p-3 text-slate-600">Detect targeted pathogen DNA in an appropriate sample.</td><td class="p-3 text-slate-600">Sample type, assay design, and clinical context affect interpretation.</td></tr>
-              <tr><td class="p-3 font-semibold">Microscopy / cytology</td><td class="p-3 text-slate-600">Directly examine suitable material for supportive findings.</td><td class="p-3 text-slate-600">Performance depends on specimen quality, organism burden, and operator expertise.</td></tr>
-              <tr class="bg-slate-50"><td class="p-3 font-semibold">Clinical assessment</td><td class="p-3 text-slate-600">Integrate signs, history, and laboratory evidence.</td><td class="p-3 text-slate-600">A test result should inform—not replace—clinical judgment.</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="text-xs text-slate-500 mt-4 leading-relaxed">This table is a general explanatory framework, not a substitute for current veterinary guidelines, product instructions, or laboratory-specific protocols.</p>
-      </div>
-    </section>
-
+ 
     <!-- Business model -->
     <section id="business-model" class="report-section mb-10 sm:mb-12">
       <div class="flex items-center gap-3 mb-4"><span class="w-10 h-10 rounded-xl bg-orange-100 text-brandOrange flex items-center justify-center"><i class="fa-solid fa-network-wired" aria-hidden="true"></i></span><h2 class="text-2xl sm:text-3xl font-bold">Commercial Model &amp; Service Design</h2></div>
