@@ -1,177 +1,304 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Canine Dirofilariosis and Molecular Diagnosis - Field Research Report</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Google Fonts: Ubuntu -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-  
-  <!-- Chart.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  
-  <!-- FontAwesome Icons CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <script>
-    // Custom Tailwind Configuration aligned with index.html brand palette
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brandOrange: '#e87519',
-            brandDark: '#142033',
-            bodyText: '#142033',
-            bgLight: '#f8f4ec'
-          },
-          fontFamily: {
-            ubuntu: ['Ubuntu', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-
+  <title>Hungary Field Report</title>
   <style>
+    :root {
+      --bg: #f8f4ec;
+      --panel: #ffffff;
+      --text: #142033;
+      --muted: #59677d;
+      --line: #e5e7eb;
+      --brand: #e87519;
+      --brand-soft: #fff1e7;
+      --shadow: 0 10px 24px rgba(20, 32, 51, 0.06);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Ubuntu', sans-serif;
-      color: #142033;
-      background-color: #f8f4ec;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
-    .latin-species {
-      font-style: italic;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #f8f4ec;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #CBD5E1;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #94A3B8;
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 244, 236, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 2px 12px rgba(20, 32, 51, 0.04);
     }
 
-    nav a:hover, nav a.active {
-      color: #e87519;
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    @media print {
-      .no-print { display: none !important; }
-      body { background: white; color: black; }
-      .shadow-sm, .shadow-md, .shadow-lg { box-shadow: none !important; }
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--text);
+    }
+
+    .logo span {
+      color: var(--brand);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 20px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--brand);
+    }
+
+    .crumb-wrap {
+      position: sticky;
+      top: 74px;
+      z-index: 90;
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .crumb {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 12px 6%;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .crumb a {
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    .crumb .slash {
+      color: #adb5bd;
+    }
+
+    .page {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 32px 6% 72px;
+    }
+
+    .hero {
+      background: var(--panel);
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 28px 28px 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--brand-soft);
+      color: var(--brand);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      border-radius: 999px;
+      padding: 7px 12px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.15;
+      color: var(--text);
+    }
+
+    .subtitle {
+      margin: 0;
+      font-size: 1.05rem;
+      color: #27364a;
+      font-weight: 600;
+    }
+
+    .meta {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 24px 24px 18px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.3rem;
+      color: var(--text);
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: #2d3748;
+      font-size: 1rem;
+    }
+
+    ul {
+      margin: 0 0 0 18px;
+      color: #2d3748;
+      padding-left: 8px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .highlight {
+      background: #fff8f1;
+      border-left: 4px solid var(--brand);
+      border-radius: 10px;
+      padding: 16px 18px;
+      color: #2f3e52;
+      font-weight: 600;
+    }
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .crumb-wrap {
+        top: 118px;
+      }
+
+      .hero,
+      .card {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
     }
   </style>
 </head>
-<body class="bg-bgLight text-bodyText min-h-screen flex flex-col antialiased selection:bg-brandOrange selection:text-white">
-
-  <!-- Fixed Top Navigation Bar (Consistent with index.html) -->
-  <nav class="sticky top-0 z-50 bg-[#f8f4ec] px-[6%] py-[18px] flex justify-between items-center shadow-sm border-b border-slate-200/60 no-print">
-    <div class="logo">
-      <a href="index.html"><img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/logo%E5%AD%97.png" alt="NostoLion Logo" class="w-[160px] block"></a>
-    </div>
-    <div class="flex flex-wrap items-center justify-end gap-x-3 gap-y-2 sm:gap-x-[22px] font-medium text-[#142033] text-sm sm:text-base">
-      <a href="index.html" class="transition-colors">Home</a>
-      <a href="about.html" class="transition-colors">About</a>
-      <a href="knowledge.html" class="active transition-colors">Knowledge</a>
-      <a href="network.html" class="transition-colors">Network</a>
-      <a href="products.html" class="transition-colors">Products</a>
-    </div>
-  </nav>
-
-  <!-- Breadcrumb / quick return bar -->
-  <div class="bg-white/90 border-b border-slate-200 no-print sticky top-[76px] z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-      <div class="flex items-center flex-wrap gap-2 text-[11px] sm:text-xs text-slate-600">
-        <a href="index.html" class="font-medium text-brandOrange hover:text-brandOrange/80 transition-colors">Home</a>
-        <span class="text-slate-400">/</span>
-        <a href="knowledge.html" class="font-medium text-brandOrange hover:text-brandOrange/80 transition-colors">Knowledge</a>
-        <span class="text-slate-400">/</span>
-        <span class="font-semibold text-slate-700">Hungary Field Report</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Sub-Header / Print Action Bar -->
-  <header class="bg-white/80 border-b border-slate-200/80 no-print">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <span class="w-2.5 h-2.5 rounded-full bg-brandOrange animate-pulse"></span>
-        <span class="text-xs font-bold tracking-widest text-brandOrange uppercase">Field Research Publication</span>
-      </div>
-      <button onclick="window.print()" class="inline-flex items-center space-x-1.5 text-xs font-medium text-slate-600 hover:text-brandOrange bg-slate-100 hover:bg-slate-200 px-3 py-1 rounded-lg transition-colors">
-        <i class="fa-solid fa-print"></i>
-        <span>Print / PDF</span>
-      </button>
+<body>
+  <header class="topbar">
+    <div class="nav-inner">
+      <div class="logo">Nosto<span>Lion</span></div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="knowledge.html" class="active">Knowledge</a>
+        <a href="network.html">Network</a>
+        <a href="products.html">Products</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Main Container -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      
-      <!-- Sticky Sidebar / Table of Contents (Desktop) -->
-      <aside class="hidden lg:block lg:col-span-3 no-print">
-        <div class="sticky top-24 bg-white rounded-xl p-5 border border-slate-200/80 shadow-sm space-y-4">
-          <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Contents</h3>
-          <nav class="space-y-1 text-sm font-medium">
-            <a href="#section-0" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">0. Executive Summary</a>
-            <a href="#section-1" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">1. Overview &amp; Zoonotic Significance</a>
-            <a href="#section-2" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">2. Clinical &amp; Diagnostic Context</a>
-            <a href="#section-3" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">3. Diagnostic Methods Comparison</a>
-            <a href="#section-4" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">4. Field Observations</a>
-            <a href="#section-5" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">5. Testing Volume Trends</a>
-            <a href="#policy-comment" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">EU Policy Impact Comment</a>
-            <a href="#section-6" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">6. Market Sizing Signals</a>
-            <a href="#section-7" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">7. Implications &amp; Questions</a>
-            <a href="#section-8" class="block px-3 py-2 rounded-lg text-slate-600 hover:bg-orange-50 hover:text-brandOrange transition-colors">8. Limitations</a>
-          </nav>
-        </div>
-      </aside>
-
-      <!-- Main Content Area -->
-      <main class="lg:col-span-9 space-y-8">
-        
-        <!-- Document Title Header Block -->
-        <header class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-sm relative overflow-hidden">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-brandOrange/10 to-transparent rounded-bl-full pointer-events-none"></div>
-          
-          <div class="inline-block bg-orange-50 border border-brandOrange/20 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-brandOrange mb-4">
-            HUNGARY
-          </div>
-
-          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brandDark leading-tight mb-3">
-            Canine Dirofilariosis and Molecular Diagnosis
-          </h1>
-
-          <p class="text-base sm:text-lg font-medium text-brandDark/80 leading-relaxed">
-            Field Research Report: Clinical Workflows, Species Differentiation, and Market Signals
-          </p>
-
-          <div class="my-6 border-b border-slate-200"></div>
-
-          <div class="flex flex-wrap items-center gap-4 text-xs text-slate-500">
-            <span class="flex items-center gap-1.5"><i class="fa-regular fa-calendar"></i> Field Survey Notes</span>
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-microscope"></i> Veterinary Diagnostics</span>
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot"></i> Hungary (KOL Clinics)</span>
-          </div>
-        </header>
-
-        <!-- rest of the report content remains unchanged -->
-      </main>
+  <div class="crumb-wrap">
+    <div class="crumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="slash">/</span>
+      <a href="knowledge.html">Knowledge</a>
+      <span class="slash">/</span>
+      <span>Hungary Field Report</span>
     </div>
   </div>
+
+  <main class="page">
+    <section class="hero">
+      <div class="badge">HUNGARY</div>
+      <h1>Canine Dirofilariosis and Molecular Diagnosis</h1>
+      <p class="subtitle">Field Research Report: Clinical Workflows, Species Differentiation, and Market Signals</p>
+      <div class="meta">
+        <span>Field Survey Notes</span>
+        <span>Veterinary Diagnostics</span>
+        <span>Hungary (KOL Clinics)</span>
+      </div>
+    </section>
+
+    <section class="content">
+      <article class="card">
+        <h2>Executive Summary</h2>
+        <p>Canine dirofilariosis remains a clinically relevant parasitic disease in Hungary, with diagnostic interpretation shaped by local screening practices, species differentiation, and the practical trade-offs between routine and molecular methods.</p>
+        <p class="highlight">The key issue is not simply whether a dog is positive, but whether the diagnostic method is capturing the real clinical and epidemiological picture.</p>
+      </article>
+
+      <article class="card">
+        <h2>Overview and Zoonotic Significance</h2>
+        <p><strong>Dirofilaria immitis</strong> is the most clinically significant species in veterinary medicine, though other filarial organisms may also appear in clinical discussion or differential diagnosis.</p>
+        <ul>
+          <li>Clinical relevance extends beyond the individual patient to broader infection pressure in endemic regions.</li>
+          <li>In practice, veterinary teams increasingly rely on fast screening tools combined with confirmatory analysis when the case is ambiguous.</li>
+          <li>Species-level differentiation matters where treatment choices, prognosis, and prophylaxis strategies differ.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Diagnostic Methods Comparison</h2>
+        <p>Routine field work often begins with direct blood-based screening, while molecular testing is used when the clinical picture demands greater resolution or when the result may influence treatment decisions.</p>
+        <ul>
+          <li><strong>Microscopy-based screening:</strong> pragmatic and cost-sensitive, but limited in sensitivity and species precision.</li>
+          <li><strong>Molecular diagnostics:</strong> more specific and useful for identification of low-level or mixed infections.</li>
+          <li><strong>Operational implication:</strong> screening can identify likely positives, while molecular confirmation improves interpretability.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Field Observations</h2>
+        <p>Across veterinary practices in the field, the perceived challenge is not only test sensitivity, but also the diagnostic workflow itself: how quickly a positive result can be interpreted, escalated, and translated into animal care decisions.</p>
+        <p>When a positive signal is seen in a dog with subtle or nonspecific clinical signs, clinicians often need a stronger evidence base to determine whether this is a true infection burden, a low-level detection, or a species-ambiguous result.</p>
+      </article>
+    </section>
+  </main>
 </body>
 </html>
