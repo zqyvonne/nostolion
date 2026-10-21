@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Knowledge Hub | NostoLion</title>
+<title>NostoLion | Founder Scientific Platform</title>
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/%E7%BA%AFlogo.png">
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}
@@ -12,26 +14,48 @@ nav{position:fixed;top:0;width:100%;padding:18px 6%;background:#f8f4ec;display:f
 .logo img{width:160px;display:block}
 nav a{margin-left:22px;text-decoration:none;color:#142033;font-weight:500;transition:color 0.2s}
 nav a:hover, nav a.active{color:#e87519}
-section{padding:140px 7% 70px}
-h1{font-size:48px;margin-bottom:15px}
-.subtitle{font-size:18px;color:#555;margin-bottom:40px}
+.hero{min-height:100vh;padding:140px 7% 70px;display:flex;gap:50px;align-items:center}
+.hero-text,.hero-image{width:50%}
+.hero h1{font-size:58px;line-height:1.1}
 .orange{color:#e87519}
+.hero p{font-size:20px;line-height:1.7}
+.btn{display:inline-block;background:#e87519;color:#fff;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:500}
+.hero-image{height:520px;border-radius:20px;background:linear-gradient(135deg,#142033,#e87519);display:flex;justify-content:center;align-items:center;color:#fff;font-size:36px;text-align:center}
+section{padding:70px 7%}
+h2{font-size:42px}
+.about{display:flex;gap:50px;align-items:center}
+.about img{width:40%;height:auto;object-fit:contain;border-radius:20px;background:#ddd}
+.about div{flex:1}
+.founder-name{margin:0;font-size:38px;font-weight:700}
+.founder-title{margin:8px 0 24px;font-size:18px;font-weight:400}
+.founder-credential{font-weight:700;color:#e87519}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
 .card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.05);transition:transform 0.2s}
 .card:hover{transform:translateY(-5px)}
-.card img{width:100%;height:220px;object-fit:cover;background:#ddd;display:block}
+.card img{width:100%;height:220px;object-fit:cover;background:#ddd}
 .card-content{padding:25px}
 .card-tag{display:inline-block;color:#e87519;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px}
 .card h3{margin-top:0;font-size:20px}
 .card p{color:#444;line-height:1.5}
 .card a{color:#e87519;text-decoration:none;font-weight:700}
-.card-link{display:block;text-decoration:none}
-.card-title-link{display:block;color:inherit;text-decoration:none}
-.breadcrumbs{font-size:13px;color:#556;display:flex;gap:10px;align-items:center;margin-bottom:20px}
-.breadcrumbs a{color:#e87519;text-decoration:none}
-footer{background:#142033;color:white;padding:40px 7%}
+/* Article publication date */
+.article-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 14px;
+  color: #8a94a6;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.article-date i {
+  font-size: 12px;
+}
 .email{font-size:18px}
-@media(max-width:900px){.cards{grid-template-columns:1fr}.breadcrumbs{flex-wrap:wrap}}
+footer{background:#142033;color:white;padding:40px 7%}
+@media(max-width:900px){.hero,.about{display:block}.hero-text,.hero-image,.about img{width:100%}.cards{grid-template-columns:1fr}}
 </style>
 </head>
 
@@ -42,68 +66,115 @@ footer{background:#142033;color:white;padding:40px 7%}
   <a href="index.html"><img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/logo%E5%AD%97.png" alt="NostoLion Logo"></a>
 </div>
 <div>
-<a href="index.html">Home</a>
+<a href="index.html" class="active">Home</a>
 <a href="about.html">About</a>
-<a href="knowledge.html" class="active">Knowledge</a>
+<a href="knowledge.html">Knowledge</a>
 <a href="network.html">Network</a>
 <a href="products.html">Products</a>
 </div>
 </nav>
 
-<section>
-  <div class="breadcrumbs">
-    <a href="index.html">Home</a>
-    <span>/</span>
-    <span>Knowledge Hub</span>
-  </div>
-
-  <h1>Knowledge <span class="orange">Hub</span></h1>
-  <p class="subtitle">Field reports, clinical research insights, and market analysis in veterinary diagnostics.</p>
-
-  <div class="cards">
-    <div class="card">
-      <a href="hungary_field_report.html" class="card-link" aria-label="Open Canine Dirofilariosis and Molecular Diagnosis article">
-        <img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/Gemini_Generated_Image_2heuuf2heuuf2heu.jfif" alt="Canine Dirofilariosis in Hungary">
-      </a>
-      <div class="card-content">
-        <span class="card-tag">Field Research Report</span>
-        <a href="hungary_field_report.html" class="card-title-link" aria-label="Open Canine Dirofilariosis and Molecular Diagnosis article">
-          <h3>Canine Dirofilariosis and Molecular Diagnosis</h3>
-        </a>
-        <p>Sensitivity vs. Convenience in Heartworm Testing: What Do Hungarian Experts Say?</p>
-        <a href="hungary_field_report.html">Read More →</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <a href="knowledge.html" class="card-link" aria-label="Open Molecular Diagnostics Adoption in European Clinics article">
-        <img src="article2.jpg" alt="Article 2">
-      </a>
-      <div class="card-content">
-        <span class="card-tag">Market Insights</span>
-        <a href="knowledge.html" class="card-title-link" aria-label="Open Molecular Diagnostics Adoption in European Clinics article">
-          <h3>Molecular Diagnostics Adoption in European Clinics</h3>
-        </a>
-        <p>Key drivers and operational hurdles for adopting PCR and isothermal amplification in daily veterinary practice.</p>
-        <a href="knowledge.html">Read More →</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <a href="knowledge.html" class="card-link" aria-label="Open Vector-Borne Pathogen Screening Workflows article">
-        <img src="article3.jpg" alt="Article 3">
-      </a>
-      <div class="card-content">
-        <span class="card-tag">Clinical Review</span>
-        <a href="knowledge.html" class="card-title-link" aria-label="Open Vector-Borne Pathogen Screening Workflows article">
-          <h3>Vector-Borne Pathogen Screening Workflows</h3>
-        </a>
-        <p>Comparative evaluation of rapid point-of-care rapid tests versus laboratory reference methods.</p>
-        <a href="knowledge.html">Read More →</a>
-      </div>
-    </div>
-  </div>
+<section class="hero">
+<div class="hero-text">
+<h1>Advancing Animal Health<br><span class="orange">Through Science & Collaboration</span></h1>
+<p>Connecting veterinary research, clinical expertise, and global innovation for a healthier future for animals.</p>
+<a class="btn" href="about.html">Explore My Vision</a>
+</div>
+<div class="hero-image">Lion<br>Scientific Heritage</div>
 </section>
+
+
+<section id="about">
+<h2>About the Founder</h2>
+<div class="about">
+<img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/cd220510-32ae-4f6d-ae15-c46e40a62488.png" alt="Cartoon portrait of NostoLion founder">
+<div>
+<h3 class="founder-name">Scarlett Zhang</h3>
+<p class="founder-title">Founder &amp; CEO</p>
+<p class="founder-credential">Licensed Veterinarian &amp; M.S. in Veterinary Medicine (Zhejiang University)</p>
+<p>With a background in veterinary medicine and years of experience in global human and veterinary IVD product management, I founded NostoLion with a simple belief: better science can create better healthcare solutions for animals and people.</p>
+<p>Driven by curiosity, clinical insight, and a passion for innovation, I connect trusted manufacturers, veterinary experts, and global partners to bring meaningful diagnostic solutions from ideas to real-world applications.</p>
+</div>
+</div>
+</section>
+
+
+<section id="knowledge">
+<h2>Knowledge Hub</h2>
+<div class="cards">
+  <!-- 匈牙利犬丝虫研究报告卡片 -->
+  <div class="card">
+    <img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/Gemini_Generated_Image_2heuuf2heuuf2heu.jfif" alt="Canine Dirofilariosis in Hungary">
+    <div class="card-content">
+      <span class="card-tag">Field Research Report</span>
+      <h3>Canine Dirofilariosis and Molecular Diagnosis</h3>
+      <p class="article-date">
+  <i class="fa-regular fa-calendar"></i>
+  Published · 19 Oct. 2026
+</p>
+      <p>Sensitivity vs. Convenience in Heartworm Testing: What Do Hungarian Experts Say?</p>
+      <a href="hungary_field_report.html">Read More →</a>
+    </div>
+  </div>
+  
+<!-- Spain Field Research Report Card -->
+<div class="card">
+  <a href="Spain_Field_Report.html" aria-label="Open Spain Field Report">
+    <img src="https://pub-e3e423dbf20a434eb3fde34a29cc5ddd.r2.dev/Spain%20article%20cover.jfif" alt="Spain Field Report">
+  </a>
+  <div class="card-content">
+    <span class="card-tag">Field Research Report</span>
+    <h3>
+      <a href="Spain_Field_Report.html" style="color: inherit; text-decoration: none;">
+        Commercial Models and Clinical Efficiency of Infectious Disease Testing in Spain
+      </a>
+      </p>
+            <p class="article-date">
+  <i class="fa-regular fa-calendar"></i>
+  Published · 21 Oct. 2026
+</p>
+    </h3>
+    <p>Field observations on companion-animal diagnostic workflows and molecular testing in Spanish hospitals.</p>
+    <a href="Spain_Field_Report.html" aria-label="Read more about Spain Field Report">Read More →</a>
+  </div>
+</div>
+
+  <!-- 预留卡片 3 -->
+  <div class="card">
+    <img src="article3.jpg" alt="Article 3">
+    <div class="card-content">
+      <span class="card-tag">Clinical Review</span>
+      <h3>Vector-Borne Pathogen Screening Workflows</h3>
+      <p>Comparative evaluation of rapid point-of-care rapid tests versus laboratory reference methods.</p>
+      <a href="knowledge.html">Read More →</a>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section id="network">
+<h2>Global Clinical Network</h2>
+<div class="about">
+<img src="research-partner.jpg" alt="Research Partner">
+<div>
+<p>Connecting veterinary universities, laboratories, and clinical experts worldwide.</p>
+<p>Each partner profile can include institution information, research focus, publications, and collaboration details.</p>
+<a href="network.html" style="color:#e87519; font-weight:700; text-decoration:none;">Explore Network →</a>
+</div>
+</div>
+</section>
+
+
+<section id="products">
+<h2>Science-Driven Solutions</h2>
+<div class="cards">
+<div class="card"><img src="product1.jpg"><div class="card-content"><h3>Solution One</h3><p>Product introduction and scientific application.</p><a href="products.html">View Product →</a></div></div>
+<div class="card"><img src="product2.jpg"><div class="card-content"><h3>Solution Two</h3><p>Product introduction and scientific application.</p><a href="products.html">View Product →</a></div></div>
+<div class="card"><img src="product3.jpg"><div class="card-content"><h3>Solution Three</h3><p>Product introduction and scientific application.</p><a href="products.html">View Product →</a></div></div>
+</div>
+</section>
+
 
 <footer>
 <p>NostoLion © 2026</p>
